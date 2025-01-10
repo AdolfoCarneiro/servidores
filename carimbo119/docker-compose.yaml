@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  minecraft-server:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft-forge-carimbo.1.19.2
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "FORGE"
+      VERSION: "1.19.2"
+      FORGEVERSION: "43.4.12"
+      MEMORY: "4G"
+      # DEBUG: "true"
+    volumes:
+      - mc_forge_carimbo_1.19:/data
+      - ./mods:/mods:ro
+      - ./config:/config:ro
+      - ./world:/world:ro
+    stdin_open: true
+    tty: true
+volumes:
+  mc_forge_carimbo_1.19: {}
