@@ -5,13 +5,14 @@ services:
     image: itzg/minecraft-server:latest
     container_name: minecraft-forge-carimbo.1.19.2
     ports:
-      - "25565:25565"
+      - "1192:1192"
     environment:
       EULA: "TRUE"
       TYPE: "FORGE"
       VERSION: "1.19.2"
       FORGEVERSION: "43.4.12"
       MEMORY: "4G"
+      SERVER_PORT: "1192"
       # DEBUG: "true"
     volumes:
       - mc_forge_carimbo_1.19:/data

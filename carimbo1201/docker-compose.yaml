@@ -10,12 +10,13 @@ services:
       VERSION: "1.20.1"
       FORGEVERSION: "47.3.22"
       MEMORY: "8G"
+      SERVER_PORT: "1201"
       # DEBUG: "true"
     volumes:
       - mc_forge_carimbo_1.20:/data
       - ./mods:/mods:ro
       - ./config:/config:ro
-      - ./defaultconfigs:/defaultconfigs:ro
+      - ./defaultconfigs:/data/defaultconfigs:ro
     stdin_open: true
     tty: true
 volumes:
