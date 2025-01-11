@@ -3,15 +3,15 @@ version: "3.8"
 services:
   minecraft-server:
     image: itzg/minecraft-server:latest
-    container_name: minecraft-forge-carimbo.1.20.1
+    container_name: minecraft-forge-carimbo_1.20.1
     ports:
-      - "25565:25585"
+      - "1201:1201"
     environment:
       EULA: "TRUE"
       TYPE: "FORGE"
       VERSION: "1.20.1"
       FORGEVERSION: "47.3.22"
-      MEMORY: "6G"
+      MEMORY: "8G"
       # DEBUG: "true"
     volumes:
       - mc_forge_carimbo_1.20.1:/data
