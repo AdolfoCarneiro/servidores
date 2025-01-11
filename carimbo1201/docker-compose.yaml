@@ -5,7 +5,7 @@ services:
     image: itzg/minecraft-server:latest
     container_name: minecraft-forge-carimbo.1.20.1
     ports:
-      - "25565:25565"
+      - "25565:25585"
     environment:
       EULA: "TRUE"
       TYPE: "FORGE"
