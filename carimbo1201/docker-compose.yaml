@@ -1,9 +1,7 @@
-version: "3.8"
-
 services:
   minecraft-server:
     image: itzg/minecraft-server:latest
-    container_name: minecraft-forge-carimbo_1.20.1
+    container_name: minecraft-forge-carimbo-1.20
     ports:
       - "1201:1201"
     environment:
@@ -14,11 +12,11 @@ services:
       MEMORY: "8G"
       # DEBUG: "true"
     volumes:
-      - mc_forge_carimbo_1.20.1:/data
+      - mc_forge_carimbo_1.20:/data
       - ./mods:/mods:ro
       - ./config:/config:ro
       - ./defaultconfigs:/defaultconfigs:ro
     stdin_open: true
     tty: true
 volumes:
-  mc_forge_carimbo_1.20.1: {}
+  mc_forge_carimbo_1.20: {}
