@@ -11,6 +11,7 @@ services:
       FORGEVERSION: "47.3.22"
       MEMORY: "8G"
       SERVER_PORT: "1201"
+      REMOVE_OLD_MODS: "true"
       # DEBUG: "true"
     volumes:
       - mc_forge_carimbo_1.20:/data
