@@ -13,7 +13,13 @@ services:
       FORGEVERSION: "43.4.12"
       MEMORY: "4G"
       SERVER_PORT: "1192"
-      # DEBUG: "true"
+      REMOVE_OLD_MODS: "true"
+      AUTOPAUSE: "TRUE"
+      AUTOPAUSE_TIMEOUT_EST: "3600"
+      AUTOPAUSE_TIMEOUT_KN: "120"
+      AUTOPAUSE_TIMEOUT_INIT: "600"
+      ALLOW_FLIGHT: "TRUE"
+      SERVER_NAME: "Carimbo 1.19.2"
     volumes:
       - mc_forge_carimbo_1.19:/data
       - ./mods:/mods:ro
