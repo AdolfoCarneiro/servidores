@@ -23,9 +23,9 @@ services:
       OVERRIDE_ICON: "TRUE"
     volumes:
       - mc_forge_carimbo_1.20:/data
-      # - ./mods:/mods:ro
-      # - ./config:/config:ro
-      # - ./defaultconfigs:/data/defaultconfigs:ro
+      - ./mods:/mods:ro
+      - ./config:/config:ro
+      - ./defaultconfigs:/data/defaultconfigs:ro
       - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
     tty: true
