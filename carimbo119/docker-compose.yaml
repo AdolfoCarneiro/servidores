@@ -21,11 +21,14 @@ services:
       ALLOW_FLIGHT: "TRUE"
       SERVER_NAME: "Carimbo 1.19.2"
       MOTD:        Server oficial dos \u00A74carimbos DOFAL\u00A7l 1.19.2
+      ICON: "/data/server-icon.png"
+      OVERRIDE_ICON: "TRUE"
     volumes:
       - mc_forge_carimbo_1.19:/data
       - ./mods:/mods:ro
       - ./config:/config:ro
       - ./world:/world:ro
+      - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
     tty: true
 volumes:
