@@ -18,6 +18,7 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: "600"
       ALLOW_FLIGHT: "TRUE"
       SERVER_NAME: "Carimbo 1.20.1"
+      MOTD:        Server oficial dos \u00A74carimbos DOFAL\u00A7l 1.20.1
     volumes:
       - mc_forge_carimbo_1.20:/data
       - ./mods:/mods:ro
