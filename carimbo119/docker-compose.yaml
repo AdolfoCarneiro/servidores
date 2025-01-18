@@ -20,7 +20,7 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: "600"
       ALLOW_FLIGHT: "TRUE"
       SERVER_NAME: "Carimbo 1.19.2"
-      MOTD:        Server oficial dos \u00A74&lcarimbos &lDOFAL\u00A7l &l&61.19.2
+      MOTD:    Server oficial dos \u00A74\u00A7lcarimbos \u00A7lDOFAL \u00A76\u00A7l1.19.2
       ICON: "/data/server-icon.png"
       OVERRIDE_ICON: "TRUE"
     volumes:

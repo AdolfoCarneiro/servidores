@@ -18,14 +18,14 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: "600"
       ALLOW_FLIGHT: "TRUE"
       SERVER_NAME: "Carimbo 1.20.1"
-      MOTD: "Server oficial dos \u00A74&lcarimbos &lDOFAL\u00A7l &l&61.20.1"
+      MOTD:    Server oficial dos \u00A74\u00A7lcarimbos \u00A7lDOFAL \u00A76\u00A7l1.201
       ICON: "/data/server-icon.png"
       OVERRIDE_ICON: "TRUE"
     volumes:
       - mc_forge_carimbo_1.20:/data
-      - ./mods:/mods:ro
-      - ./config:/config:ro
-      - ./defaultconfigs:/data/defaultconfigs:ro
+      # - ./mods:/mods:ro
+      # - ./config:/config:ro
+      # - ./defaultconfigs:/data/defaultconfigs:ro
       - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
     tty: true
