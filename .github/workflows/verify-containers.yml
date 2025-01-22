@@ -1,0 +1,13 @@
+name: VERIFICA STATUS DOS CONTAINERS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  stop-server:
+    runs-on: mc-server-runner
+    steps:
+
+      - name: Verificar lista de containers
+        run: |
+          docker ps -a
