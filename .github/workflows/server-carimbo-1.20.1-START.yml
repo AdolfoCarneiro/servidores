@@ -1,0 +1,25 @@
+name: START SERVER carimbo 1.20.1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start-server:
+    runs-on: mc-server-runner
+
+    steps:
+
+      - name: Iniciar container com servidor
+        run: |
+          cd $GITHUB_WORKSPACE/carimbo1201 && \
+          docker compose up -d
+
+  observe:
+    runs-on: mc-server-runner
+    needs:  start-server
+    steps:
+      - name: Observe os logs por 5 minutos
+        run: |
+          cd $GITHUB_WORKSPACE/carimbo1201 && \
+          docker compose logs -f &
+          sleep 300

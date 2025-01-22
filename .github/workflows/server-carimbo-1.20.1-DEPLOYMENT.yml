@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Deploy carimbo 1.20.1
 
 on:
@@ -21,3 +19,13 @@ jobs:
           cd $GITHUB_WORKSPACE/carimbo1201 && \
           docker compose down && \
           docker compose up -d
+
+  observe:
+    runs-on: mc-server-runner
+    needs:  deploy
+    steps:
+      - name: Observe os logs por 5 minutos
+        run: |
+          cd $GITHUB_WORKSPACE/carimbo1201 && \
+          docker compose logs -f &
+          sleep 300

@@ -1,0 +1,25 @@
+name: STOP SERVER carimbo 1.19.2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  stop-server:
+    runs-on: mc-server-runner
+
+    steps:
+
+      - name: Desligar container com servidor
+        run: |
+          cd $GITHUB_WORKSPACE/carimbo119 && \
+          docker compose down
+
+  observe:
+    runs-on: mc-server-runner
+    needs:  stop-server
+    steps:
+      - name: Observe os logs por 5 minutos
+        run: |
+          cd $GITHUB_WORKSPACE/carimbo119 && \
+          docker compose logs -f &
+          sleep 60
