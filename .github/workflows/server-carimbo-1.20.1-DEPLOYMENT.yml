@@ -24,8 +24,8 @@ jobs:
     runs-on: mc-server-runner
     needs:  deploy
     steps:
-      - name: Observe os logs por 5 minutos
+      - name: Observe os logs até que o servidor esteja no ar
         run: |
           cd $GITHUB_WORKSPACE/carimbo1201 && \
-          docker compose logs -f &
+          (docker compose logs -f | grep -q "Dedicated server took" && echo "Servidor no ar!") & \
           sleep 300
