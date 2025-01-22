@@ -13,13 +13,3 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/carimbo1201 && \
           docker compose down
-  
-  observe:
-    runs-on: mc-server-runner
-    needs:  stop-server
-    steps:
-      - name: Observe os logs por 5 minutos
-        run: |
-          cd $GITHUB_WORKSPACE/carimbo1201 && \
-          docker compose logs -f &
-          sleep 60
