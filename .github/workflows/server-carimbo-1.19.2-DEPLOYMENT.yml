@@ -27,5 +27,5 @@ jobs:
       - name: Observe os logs até que o servidor esteja no ar
         run: |
           cd $GITHUB_WORKSPACE/carimbo119 && \
-          (docker compose logs -f | grep -q "Dedicated server took" && echo "Servidor no ar!") & \
-          sleep 300
+          timeout 300 sh -c 'until docker compose logs -f | grep -q "Dedicated server took"; do sleep 1; done' && \
+          echo "Servidor no ar!"
