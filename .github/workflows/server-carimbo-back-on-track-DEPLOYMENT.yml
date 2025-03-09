@@ -16,7 +16,7 @@ jobs:
 
       - name: Run Docker Compose
         run: |
-          cd $GITHUB_WORKSPACE/back_on_track && \
+          cd $GITHUB_WORKSPACE/create_back_on_track && \
           docker compose down && \
           docker compose up -d
 
@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Observe os logs até que o servidor esteja no ar
         run: |
-          cd $GITHUB_WORKSPACE/back_on_track && \
+          cd $GITHUB_WORKSPACE/create_back_on_track && \
           timeout 300 sh -c 'docker compose logs -f | while IFS= read -r line; do
             echo "$line"; 
             if echo "$line" | grep -q "Dedicated server took"; then 
