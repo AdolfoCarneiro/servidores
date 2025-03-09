@@ -3,7 +3,7 @@ services:
     image: itzg/minecraft-server:latest
     container_name: minecraft-forge-back_on_track
     ports:
-      - "1201:1201"
+      - "1182:1182"
     environment:
       EULA: "TRUE"
       TYPE: "FORGE"
@@ -11,7 +11,7 @@ services:
       FORGEVERSION: "40.2.9"
       INIT_MEMORY: "4G"
       MAX_MEMORY: "12G"
-      SERVER_PORT: "1201"
+      SERVER_PORT: "1182"
       REMOVE_OLD_MODS: "true"
       DIFFICULTY: "hard"
       AUTOPAUSE: "TRUE"
