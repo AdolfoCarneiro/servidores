@@ -31,8 +31,18 @@ services:
       BACKUP_ON_START: "TRUE"
       ENABLE_QUERY: "TRUE"
       QUERY_PORT: "1217"
-      OPS: "Dofal"
-      LEVEL_NAME: "Gow"
+      SPAWN_PROTECTION: "0"
+      VIEW_DISTANCE: "10"
+      SIMULATION_DISTANCE: "8"
+      MAX_PLAYERS: "20"
+      PVP: "TRUE"
+      SPAWN_ANIMALS: "TRUE"
+      SPAWN_MONSTERS: "TRUE"
+      SPAWN_NPCS: "TRUE"
+      FORCE_GAMEMODE: "FALSE"
+      GAMEMODE: "survival"
+      BROADCAST_RCON_TO_OPS: "TRUE"
+      BROADCAST_CONSOLE_TO_OPS: "TRUE"
     volumes:
       - gow_vanilla_data:/data
       - ./server-icon.png:/data/server-icon.png:ro
