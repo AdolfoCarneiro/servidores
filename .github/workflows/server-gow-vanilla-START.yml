@@ -13,3 +13,18 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/gow_vanilla && \
           docker compose up -d
+
+  observe:
+    runs-on: mc-server-runner
+    needs:  start-server
+    steps:
+      - name: Observe os logs até que o servidor esteja no ar
+        run: |
+          cd $GITHUB_WORKSPACE/gow_vanilla && \
+          timeout 300 sh -c 'docker compose logs -f | while IFS= read -r line; do
+            echo "$line"; 
+            if echo "$line" | grep -q "Dedicated server took"; then 
+              echo "Servidor no ar!"; 
+              exit 0; 
+            fi; 
+          done' || (echo "Timeout atingido: Servidor não está no ar." && exit 1) 
