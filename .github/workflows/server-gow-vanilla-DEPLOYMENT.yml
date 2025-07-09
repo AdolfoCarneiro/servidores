@@ -1,0 +1,21 @@
+name: Deploy GOW Vanilla
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: mc-server-runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Docker Compose
+        run: |
+          cd $GITHUB_WORKSPACE/gow_vanilla && \
+          docker compose down && \
+          docker compose up -d

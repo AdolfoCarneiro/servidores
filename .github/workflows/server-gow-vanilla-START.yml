@@ -1,0 +1,15 @@
+name: START SERVER GOW Vanilla
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start-server:
+    runs-on: mc-server-runner
+
+    steps:
+
+      - name: Iniciar container com servidor
+        run: |
+          cd $GITHUB_WORKSPACE/gow_vanilla && \
+          docker compose up -d

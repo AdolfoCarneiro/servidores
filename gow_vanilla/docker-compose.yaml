@@ -1,0 +1,43 @@
+services:
+  minecraft-server:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft-gow-vanilla
+    ports:
+      - "1217:1217"
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+      TYPE: "VANILLA"
+      VERSION: "1.21.7"
+      INIT_MEMORY: "2G"
+      MAX_MEMORY: "8G"
+      SERVER_PORT: "1217"
+      DIFFICULTY: "hard"
+      AUTOPAUSE: "TRUE"
+      AUTOPAUSE_TIMEOUT_EST: "3600"
+      AUTOPAUSE_TIMEOUT_KN: "120"
+      AUTOPAUSE_TIMEOUT_INIT: "600"
+      ALLOW_FLIGHT: "TRUE"
+      SERVER_NAME: "GOW Vanilla"
+      MOTD: "Server oficial da \u00A7eGOW \u00A77no minecraft"
+      ICON: "/data/server-icon.png"
+      OVERRIDE_ICON: "TRUE"
+      ENABLE_RCON: "TRUE"
+      RCON_PASSWORD: "gow123"
+      RCON_PORT: "12171"
+      REMOVE_OLD_MODS: "false"
+      SYNC_SKIP_NEWER_FILES: "false"
+      USE_AIKAR_FLAGS: "TRUE"
+      BACKUP_ON_START: "TRUE"
+      ENABLE_QUERY: "TRUE"
+      QUERY_PORT: "1217"
+      OPS: "Dofal"
+    volumes:
+      - ./Gow:/data/world
+      - ./server-icon.png:/data/server-icon.png:ro
+      - gow_vanilla_data:/data
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+volumes:
+  gow_vanilla_data: {} 
