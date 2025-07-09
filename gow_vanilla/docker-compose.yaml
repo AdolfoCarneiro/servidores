@@ -35,10 +35,8 @@ services:
       LEVEL_NAME: "Gow"
     volumes:
       - gow_vanilla_data:/data
-      - ./Gow:/data/world:rw
       - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
     tty: true
-    restart: no
 volumes:
   gow_vanilla_data: {} 
