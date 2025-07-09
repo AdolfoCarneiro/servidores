@@ -38,5 +38,6 @@ services:
       - gow_vanilla_data:/data
     stdin_open: true
     tty: true
+    restart: no
 volumes:
   gow_vanilla_data: {} 
