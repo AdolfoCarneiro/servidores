@@ -32,10 +32,11 @@ services:
       ENABLE_QUERY: "TRUE"
       QUERY_PORT: "1217"
       OPS: "Dofal"
+      LEVEL_NAME: "Gow"
     volumes:
-      - ./Gow:/data/world
-      - ./server-icon.png:/data/server-icon.png:ro
       - gow_vanilla_data:/data
+      - ./Gow:/data/world:rw
+      - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
     tty: true
     restart: no
