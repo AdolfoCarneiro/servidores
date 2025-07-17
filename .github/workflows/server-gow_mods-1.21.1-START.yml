@@ -1,0 +1,30 @@
+name: START SERVER GOW Mods 1.21.1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start-server:
+    runs-on: mc-server-runner
+
+    steps:
+
+      - name: Iniciar container com servidor
+        run: |
+          cd $GITHUB_WORKSPACE/gow_mods_1211 && \
+          docker compose up -d
+
+  observe:
+    runs-on: mc-server-runner
+    needs:  start-server
+    steps:
+      - name: Observe os logs até que o servidor esteja no ar
+        run: |
+          cd $GITHUB_WORKSPACE/gow_mods_1211 && \
+          timeout 300 sh -c 'docker compose logs -f | while IFS= read -r line; do
+            echo "$line"; 
+            if echo "$line" | grep -q "RCON running on 0.0.0.0:25575"; then 
+              echo "Servidor no ar!"; 
+              exit 0; 
+            fi; 
+          done' || (echo "Timeout atingido: Servidor não está no ar." && exit 1) 

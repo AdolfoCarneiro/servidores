@@ -1,0 +1,15 @@
+name: STOP SERVER GOW Mods 1.21.1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  stop-server:
+    runs-on: mc-server-runner
+
+    steps:
+
+      - name: Desligar container com servidor
+        run: |
+          cd $GITHUB_WORKSPACE/gow_mods_1211 && \
+          docker compose down 

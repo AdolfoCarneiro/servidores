@@ -1,0 +1,36 @@
+services:
+  minecraft-server:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft-neoforge-gow-1.21.1
+    ports:
+      - "1211:1211"
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+      TYPE: "NEOFORGE"
+      VERSION: "1.21.1"
+      NEOFORGE_VERSION: "21.1.190"
+      INIT_MEMORY: "4G"
+      MAX_MEMORY: "12G"
+      SERVER_PORT: "1211"
+      REMOVE_OLD_MODS: "true"
+      DIFFICULTY: "hard"
+      AUTOPAUSE: "TRUE"
+      AUTOPAUSE_TIMEOUT_EST: "3600"
+      AUTOPAUSE_TIMEOUT_KN: "120"
+      AUTOPAUSE_TIMEOUT_INIT: "600"
+      ALLOW_FLIGHT: "TRUE"
+      SERVER_NAME: "GOW mods 1.21.1"
+      MOTD: "Server oficial da \u00A7eGOW \u00A77com mods no minecraft"
+      ICON: "/data/server-icon.png"
+      OVERRIDE_ICON: "TRUE"
+    volumes:
+      - mc_neoforge_gow_1.21.1:/data
+      - ./mods:/mods:ro
+      - ./config:/config:ro
+      - ./defaultconfigs:/data/defaultconfigs:ro
+      - ./server-icon.png:/data/server-icon.png:ro
+    stdin_open: true
+    tty: true
+volumes:
+  mc_neoforge_gow_1.21.1: {}
