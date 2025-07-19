@@ -13,17 +13,32 @@ services:
       INIT_MEMORY: "4G"
       MAX_MEMORY: "12G"
       SERVER_PORT: "1211"
-      REMOVE_OLD_MODS: "true"
       DIFFICULTY: "hard"
-      AUTOPAUSE: "TRUE"
-      AUTOPAUSE_TIMEOUT_EST: "3600"
-      AUTOPAUSE_TIMEOUT_KN: "120"
-      AUTOPAUSE_TIMEOUT_INIT: "600"
+      AUTOPAUSE: "FALSE"
       ALLOW_FLIGHT: "TRUE"
       SERVER_NAME: "GOW mods 1.21.1"
       MOTD: "Server oficial da \u00A7eGOW \u00A77com mods no minecraft"
       ICON: "/data/server-icon.png"
       OVERRIDE_ICON: "TRUE"
+      OPS: "Dofal"
+      VIEW_DISTANCE: 6
+      SIMULATION_DISTANCE: 4
+      JVM_XX_OPTS: >-
+        -XX:+UseG1GC
+        -XX:+ParallelRefProcEnabled
+        -XX:MaxGCPauseMillis=50
+        -XX:+UnlockExperimentalVMOptions
+        -XX:G1NewSizePercent=20
+        -XX:G1MaxNewSizePercent=40
+        -XX:G1HeapRegionSize=16M
+        -XX:G1ReservePercent=15
+        -XX:G1HeapWastePercent=5
+        -XX:G1MixedGCCountTarget=4
+        -XX:InitiatingHeapOccupancyPercent=20
+        -XX:G1MixedGCLiveThresholdPercent=90
+        -XX:+AlwaysPreTouch
+        -XX:+DisableExplicitGC
+        -XX:+PerfDisableSharedMem
     volumes:
       - mc_neoforge_gow_1.21.1:/data
       - ./mods:/mods:ro
@@ -32,5 +47,6 @@ services:
       - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
     tty: true
+    cpus: 5.0 
 volumes:
   mc_neoforge_gow_1.21.1: {}
