@@ -48,5 +48,6 @@ services:
       - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
     tty: true
+    restart: unless-stopped
 volumes:
   mc_neoforge_gow_1.21.1: {}
