@@ -24,7 +24,7 @@
 		#The maximum rarity of totems to spawn when a player first logs in. [0-3], -1 disables totem spawning.
 		totemMaximumSpawnRarity = 1
 		#Id's of abilities that should be disabled. (ids: https://github.com/CyclopsMC/EverlastingAbilities/wiki/Ability-datapacks#default-abilities)
-		disabledAbilities = ["everlastingabilities:special/flight","everlastingabilities:effect/saturation","everlastingabilities:attribute_modifier/entity_range","everlastingabilities:effect/conduit_power","everlastingabilities:attribute_modifier/block_range","everlastingabilities:attribute_modifier/attack_steroids"]
+		disabledAbilities = ["everlastingabilities:special/flight","everlastingabilities:effect/saturation","everlastingabilities:attribute_modifier/entity_range","everlastingabilities:effect/conduit_power","everlastingabilities:attribute_modifier/block_range"]
 		#The maximum amount of abilities a player can have, -1 is infinite.
 		maxPlayerAbilities = 10
 
