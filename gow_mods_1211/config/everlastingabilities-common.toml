@@ -20,7 +20,7 @@
 		#1/x chance for mobs to have abilities.
 		mobAbilityChance = 60
 		#The amount of exhaustion that should by applied to the player per active ability per second.
-		exhaustionPerAbilityTick = 0.01
+		exhaustionPerAbilityTick = 0.015
 		#The maximum rarity of totems to spawn when a player first logs in. [0-3], -1 disables totem spawning.
 		totemMaximumSpawnRarity = 1
 		#Id's of abilities that should be disabled. (ids: https://github.com/CyclopsMC/EverlastingAbilities/wiki/Ability-datapacks#default-abilities)
