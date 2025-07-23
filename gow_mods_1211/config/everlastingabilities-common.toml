@@ -26,7 +26,7 @@
 		#Id's of abilities that should be disabled. (ids: https://github.com/CyclopsMC/EverlastingAbilities/wiki/Ability-datapacks#default-abilities)
 		disabledAbilities = ["everlastingabilities:special/flight","everlastingabilities:effect/saturation","everlastingabilities:attribute_modifier/entity_range","everlastingabilities:effect/conduit_power","everlastingabilities:attribute_modifier/block_range"]
 		#The maximum amount of abilities a player can have, -1 is infinite.
-		maxPlayerAbilities = 10
+		maxPlayerAbilities = 12
 
 	[core.ability_totem]
 		#This many totems combined in a crafting grid produces a new random totem (0 to disable)
