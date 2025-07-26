@@ -6,6 +6,7 @@ services:
       - "1211:1211"
     environment:
       EULA: "TRUE"
+      SPAWN_PROTECTION: 7
       ONLINE_MODE: "FALSE"
       TYPE: "NEOFORGE"
       VERSION: "1.21.1"
