@@ -4,11 +4,11 @@ enableStructureSpecificDatapack = true
 [scaling]
 	# Default: 0.03
 	# Range: 0.0 ~ 1000.0
-	healthFactor = 0.01
+	healthFactor = 0.03
 	exponentialHealth = false
 	# Default: 0.02
 	# Range: 0.0 ~ 1000.0
-	damageFactor = 0.007
+	damageFactor = 0.02
 	exponentialDamage = false
 	# Default: 0.05
 	# Range: 0.0 ~ 1000.0
@@ -29,7 +29,7 @@ enableStructureSpecificDatapack = true
 	#Not applicable to mobs with minimum level.
 	# Default: 1.0
 	# Range: 0.0 ~ 1.0
-	globalTraitChance = 0.5
+	globalTraitChance = 1.0
 	#Not applicable to mobs with minimum level.
 	# Default: 0.1
 	# Range: 0.0 ~ 1.0
@@ -40,10 +40,10 @@ enableStructureSpecificDatapack = true
 	allowExtraEnchantments = true
 	# Default: 20
 	# Range: 0 ~ 1000
-	defaultLevelBase = 5
+	defaultLevelBase = 20
 	# Default: 16.0
 	# Range: 0.0 ~ 1000.0
-	defaultLevelVar = 8.0
+	defaultLevelVar = 16.0
 	# Default: 1.5
 	# Range: 0.0 ~ 10.0
 	defaultLevelScale = 1.5
@@ -78,16 +78,16 @@ enableStructureSpecificDatapack = true
 	maxMobLevel = 3000
 	# Default: 30
 	# Range: 1 ~ 100000
-	killsPerLevel = 60
+	killsPerLevel = 30
 	# Default: 0.8
 	# Range: 0.0 ~ 2.0
-	playerDeathDecay = 0.6
+	playerDeathDecay = 0.8
 	keepInventoryRuleKeepDifficulty = false
 	deathDecayDimension = true
 	deathDecayTraitCap = true
 	# Default: 48
 	# Range: 0 ~ 128
-	newPlayerProtectRange = 96
+	newPlayerProtectRange = 48
 
 [orb_and_spawner]
 	allowHostilityOrb = true
