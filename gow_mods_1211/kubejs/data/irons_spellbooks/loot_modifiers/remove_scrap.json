@@ -1,0 +1,13 @@
+{
+    "type": "kubejs:remove_loot",
+    "conditions": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "irons_spellbooks:ancient_knight"
+            }
+        }
+    ],
+    "item": "minecraft:netherite_scrap"
+}

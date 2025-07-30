@@ -45,7 +45,7 @@ services:
       - mc_neoforge_gow_1.21.1:/data
       - ./mods:/mods:ro
       - ./config:/config:ro
-      - ./kubejs:/kubejs:ro
+      - ./kubejs:/data/kubejs
       - ./defaultconfigs:/data/defaultconfigs:ro
       - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
