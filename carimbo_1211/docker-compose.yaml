@@ -1,0 +1,56 @@
+services:
+  minecraft-server:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft-neoforge-gow-1.21.1
+    ports:
+      - "1212:1212"
+    environment:
+      EULA: "TRUE"
+      SPAWN_PROTECTION: 7
+      ONLINE_MODE: "FALSE"
+      TYPE: "NEOFORGE"
+      VERSION: "1.21.1"
+      NEOFORGE_VERSION: "21.1.190"
+      INIT_MEMORY: "4G"
+      MAX_MEMORY: "12G"
+      SERVER_PORT: "1212"
+      DIFFICULTY: "hard"
+      AUTOPAUSE: "FALSE"
+      SEED: "2707755688481255385"
+      ALLOW_FLIGHT: "TRUE"
+      SERVER_NAME: "Carimbo 1.21.1"
+      MOTD: Server oficial dos \u00A74\u00A7lcarimbos \u00A7lDOFAL \u00A76\u00A7l1.21.1
+      ICON: "/data/server-icon.png"
+      OVERRIDE_ICON: "TRUE"
+      REMOVE_OLD_MODS: "true"
+      OPS: "Dofal"
+      VIEW_DISTANCE: 6
+      SIMULATION_DISTANCE: 2
+      JVM_XX_OPTS: >-
+        -XX:+UseG1GC
+        -XX:+ParallelRefProcEnabled
+        -XX:MaxGCPauseMillis=50
+        -XX:+UnlockExperimentalVMOptions
+        -XX:G1NewSizePercent=20
+        -XX:G1MaxNewSizePercent=40
+        -XX:G1HeapRegionSize=16M
+        -XX:G1ReservePercent=15
+        -XX:G1HeapWastePercent=5
+        -XX:G1MixedGCCountTarget=4
+        -XX:InitiatingHeapOccupancyPercent=20
+        -XX:G1MixedGCLiveThresholdPercent=90
+        -XX:+AlwaysPreTouch
+        -XX:+DisableExplicitGC
+        -XX:+PerfDisableSharedMem
+    volumes:
+      - mc_neoforge_gow_1.21.1:/data
+      - ./mods:/mods:ro
+      - ./config:/config:ro
+      - ./defaultconfigs:/data/defaultconfigs:ro
+      - ./kubejs:/data/kubejs:ro
+      - ./server-icon.png:/data/server-icon.png:ro
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+volumes:
+  mc_neoforge_gow_1.21.1: {}
