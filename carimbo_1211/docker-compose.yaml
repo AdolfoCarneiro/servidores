@@ -47,7 +47,7 @@ services:
       - ./mods:/mods:ro
       - ./config:/config:ro
       - ./defaultconfigs:/data/defaultconfigs:ro
-      - ./kubejs:/data/kubejs:ro
+      - ./kubejs:/data/kubejs
       - ./server-icon.png:/data/server-icon.png:ro
     stdin_open: true
     tty: true
