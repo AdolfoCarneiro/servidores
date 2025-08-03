@@ -1,7 +1,7 @@
 services:
   minecraft-server:
     image: itzg/minecraft-server:latest
-    container_name: minecraft-neoforge-gow-1.21.1
+    container_name: minecraft-neoforge-carimbo-1.21.1
     ports:
       - "1212:1212"
     environment:
@@ -43,7 +43,7 @@ services:
         -XX:+DisableExplicitGC
         -XX:+PerfDisableSharedMem
     volumes:
-      - mc_neoforge_gow_1.21.1:/data
+      - mc_neoforge_carimbo_1.21.1:/data
       - ./mods:/mods:ro
       - ./config:/config:ro
       - ./defaultconfigs:/data/defaultconfigs:ro
@@ -53,4 +53,4 @@ services:
     tty: true
     restart: unless-stopped
 volumes:
-  mc_neoforge_gow_1.21.1: {}
+  mc_neoforge_carimbo_1.21.1: {}
