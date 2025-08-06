@@ -25,7 +25,7 @@ services:
       REMOVE_OLD_MODS: "true"
       OPS: "Dofal"
       VIEW_DISTANCE: 6
-      SIMULATION_DISTANCE: 2
+      SIMULATION_DISTANCE: 3
       JVM_XX_OPTS: >-
         -XX:+UseG1GC
         -XX:+ParallelRefProcEnabled
