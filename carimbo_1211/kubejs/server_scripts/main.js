@@ -33,6 +33,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'cobblemon:ancient_jet_ball' })
   event.remove({ id: 'cobblemon:ancient_gigaton_ball' })
   event.remove({ id: 'cobblemon:ancient_origin_ball' })
+  event.remove({ id: 'apothic_enchanting:treasure_shelf' })
   event.remove({ id: 'cobblemon_industries:sequenced_assembly_quick_ball' })
 
   const incompleteQuickBall = Item.of('cobblemon_industries:incomplete_quick_ball')
