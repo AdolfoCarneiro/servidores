@@ -34,38 +34,14 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'cobblemon:ancient_gigaton_ball' })
   event.remove({ id: 'cobblemon:ancient_origin_ball' })
   event.remove({ id: 'apothic_enchanting:treasure_shelf' })
-  event.remove({ id: 'cobblemon_industries:sequenced_assembly_quick_ball' })
-
-  const incompleteQuickBall = Item.of('cobblemon_industries:incomplete_quick_ball')
-    .withNBT({
-      SequencedAssembly: {
-        Progress: 0.5,
-        Step: 1,
-        id: 'cobblemon_industries:sequenced_assembly_quick_ball'
-      }
-    })
-
-  // mixing: potion + lid + base → incomplete quick ball
+  event.remove({ id: 'cobblemon_industries:quickballrec' })
+  
   event.recipes.create.mixing(
-    incompleteQuickBall,
+    'cobblemon:quick_ball',
     [
       Fluid.of('create:potion', 250, { Potion: 'minecraft:strong_swiftness' }),
-      'cobblemon_industries:quick_ball_lid',
-      'cobblemon_industries:iron_ball_base'
+      'cobblemore_lib:quick_ball_lid',
+      'cobblemore_lib:poke_ball_base'
     ]
   ).heated()
-
-  // pressing: incomplete → quick ball
-  event.recipes.create.pressing('cobblemon:quick_ball', incompleteQuickBall)
-
-  // crushing (mantém igual, só com a API nova)
-  event.recipes.create.crushing(
-    [
-      'tfmg:limesand',
-      Item.of('minecraft:quartz').withChance(0.12),
-      Item.of('minecraft:lapis_lazuli').withChance(0.08)
-    ],
-    'create:limestone'
-  )
-
 })
