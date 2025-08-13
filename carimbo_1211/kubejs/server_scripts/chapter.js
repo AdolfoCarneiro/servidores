@@ -49,21 +49,7 @@ ServerEvents.recipes(event => {
                     "id": "minecraft:sand"
                 },
                 "count": 1
-            },
-            {
-                "chance": 0.1,
-                "item": {
-                    "id": "minecraft:flint"
-                },
-                "count": 1
-            },
-            {
-                "chance": 0.05,
-                "item": {
-                    "id": "minecraft:clay_ball"
-                },
-                "count": 1
-            },
+            }
         ],
         processingTime: 100
     }).id('kubejs:milling/gravel_manual');
