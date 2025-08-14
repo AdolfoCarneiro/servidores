@@ -52,7 +52,6 @@ ServerEvents.recipes(event => {
                 },
                 "count": 1
             }
-        ],
-        processingTime: 100
+        ]
     }).id('kubejs:milling/gravel_manual');
 })
