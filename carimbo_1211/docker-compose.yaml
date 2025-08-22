@@ -15,7 +15,6 @@ services:
       SERVER_PORT: "1212"
       DIFFICULTY: "hard"
       AUTOPAUSE: "FALSE"
-      SEED: "2707755688481255385"
       ALLOW_FLIGHT: "TRUE"
       SERVER_NAME: "Carimbo 1.21.1"
       MOTD: Server oficial dos \u00A74\u00A7lcarimbos \u00A7lDOFAL \u00A76\u00A7l1.21.1
