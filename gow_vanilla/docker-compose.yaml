@@ -2,6 +2,7 @@ services:
   minecraft-server:
     image: itzg/minecraft-server:latest
     container_name: minecraft-gow-vanilla
+    user: "0:0"
     ports:
       - "1217:1217"
     environment:
@@ -46,6 +47,7 @@ services:
     volumes:
       - gow_vanilla_data:/data
       - ./server-icon.png:/data/server-icon.png:ro
+      - ./Gow:/worlds/world
     stdin_open: true
     tty: true
 volumes:
