@@ -10,7 +10,7 @@ services:
       ONLINE_MODE: "FALSE"
       TYPE: "NEOFORGE"
       VERSION: "1.21.1"
-      NEOFORGE_VERSION: "21.1.190"
+      NEOFORGE_VERSION: "21.1.208"
       INIT_MEMORY: "4G"
       MAX_MEMORY: "12G"
       SERVER_PORT: "1212"
